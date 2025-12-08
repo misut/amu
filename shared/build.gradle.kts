@@ -1,5 +1,5 @@
 plugins {
-    alias(libs.plugins.android.application)
+    alias(libs.plugins.android.library)
     alias(libs.plugins.jetbrains.compose)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.multiplatform)
@@ -7,24 +7,16 @@ plugins {
 
 kotlin {
     androidTarget()
-    sourceSets {
-        val androidMain by getting {
-            dependencies {
-
-            }
-        }
-    }
 }
 
 android {
     compileSdk = 36
-    namespace = "amu"
+    namespace = "amu.shared"
+    sourceSets["main"].manifest.srcFile("src/androidMain/AndroidManifest.xml")
+    sourceSets["main"].res.srcDirs("src/androidMain/res")
+
     defaultConfig {
-        applicationId = "amu"
         minSdk = 26
-        targetSdk = 36
-        versionCode = 1
-        versionName = "1.0"
     }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
