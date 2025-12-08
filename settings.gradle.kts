@@ -8,5 +8,5 @@ pluginManagement {
 }
 
 include(
-    ":android"
+    ":androidApp"
 )

@@ -1,36 +1,33 @@
 plugins {
-    id("com.android.application") version "8.3.0"
+    alias {
+        libs.plugins.kotlin.android
+        libs.plugins.kotlin.multiplatform
+    }
+
+    alias {
+        libs.plugins.android.application
+    }
 }
 
-repositories {
-    google()
-    mavenCentral()
+kotlin {
+    androidTarget()
 }
 
 android {
-    compileSdk = 35
+    compileSdk = 36
+    namespace = "amu"
     defaultConfig {
-        applicationId = "org.gradle.samples"
-        namespace = "org.gradle.samples"
-        minSdk = 16
-        targetSdk = 35
+        applicationId = "amu"
+        minSdk = 26
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
-        testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
-    buildTypes {
-        getByName("release") {
-            isMinifyEnabled = false
-            proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
-        }
+    compileOptions {
+        sourceCompatibility = JavaVersion.VERSION_17
+        targetCompatibility = JavaVersion.VERSION_17
     }
-}
-
-dependencies {
-    implementation("androidx.appcompat:appcompat:1.2.0")
-    implementation("com.google.android.material:material:1.2.0")
-    implementation("androidx.constraintlayout:constraintlayout:2.0.4")
-    testImplementation("junit:junit:4.13.1")
-    androidTestImplementation("androidx.test.ext:junit:1.1.2")
-    androidTestImplementation("androidx.test.espresso:espresso-core:3.3.0")
+    kotlin {
+        jvmToolchain(17)
+    }
 }
