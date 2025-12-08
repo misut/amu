@@ -8,12 +8,12 @@ repositories {
 }
 
 android {
-    compileSdk = 30
+    compileSdk = 35
     defaultConfig {
         applicationId = "org.gradle.samples"
         namespace = "org.gradle.samples"
         minSdk = 16
-        targetSdk = 30
+        targetSdk = 35
         versionCode = 1
         versionName = "1.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
