@@ -2,10 +2,9 @@
 
 ## Staged
 
-* Wallpaper
 * Search
 * Downloaded Files
 
 ## Done
 
-* null
+* Wallpaper
