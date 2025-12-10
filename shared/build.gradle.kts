@@ -7,6 +7,21 @@ plugins {
 
 kotlin {
     androidTarget()
+
+    sourceSets {
+        commonMain.dependencies {
+            api(compose.foundation)
+            api(compose.material3)
+            api(compose.runtime)
+            api(compose.ui)
+        }
+
+        androidMain.dependencies {
+            api(libs.androidx.activity.compose)
+            api(libs.androidx.appcompat)
+            api(libs.androidx.core.ktx)
+        }
+    }
 }
 
 android {

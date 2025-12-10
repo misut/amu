@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  <color name="md_theme_primary">#FF0000</color> <!-- 예: 빨강 -->
+  <color name="md_theme_onPrimary">#FFFFFF</color> <!-- 예: 흰색 -->
+</resources>

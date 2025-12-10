@@ -8,10 +8,8 @@ plugins {
 kotlin {
     androidTarget()
     sourceSets {
-        val androidMain by getting {
-            dependencies {
-
-            }
+        androidMain.dependencies {
+            implementation(project(":shared"))
         }
     }
 }
@@ -20,7 +18,7 @@ android {
     compileSdk = 36
     namespace = "amu"
     defaultConfig {
-        applicationId = "amu"
+        applicationId = "misut.amu"
         minSdk = 26
         targetSdk = 36
         versionCode = 1
