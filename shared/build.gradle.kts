@@ -17,6 +17,7 @@ kotlin {
 
     sourceSets {
         commonMain.dependencies {
+            api(compose.components.uiToolingPreview)
             api(compose.foundation)
             api(compose.material3)
             api(compose.runtime)
@@ -30,8 +31,6 @@ kotlin {
         androidMain.dependencies {
             api(libs.androidx.activity.compose)
             api(libs.androidx.appcompat)
-            api(libs.androidx.compose.ui)
-            api(libs.androidx.compose.ui.tooling.preview)
             api(libs.androidx.core.ktx)
         }
     }

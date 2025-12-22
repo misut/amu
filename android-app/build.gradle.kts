@@ -29,8 +29,6 @@ android {
 
 dependencies {
     implementation(project(":shared"))
-
-    debugImplementation(libs.androidx.compose.ui.tooling)
 }
 
 kotlin {
