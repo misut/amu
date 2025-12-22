@@ -30,6 +30,8 @@ kotlin {
         androidMain.dependencies {
             api(libs.androidx.activity.compose)
             api(libs.androidx.appcompat)
+            api(libs.androidx.compose.ui)
+            api(libs.androidx.compose.ui.tooling.preview)
             api(libs.androidx.core.ktx)
         }
     }

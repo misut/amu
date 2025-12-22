@@ -1,18 +1,8 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.compose)
-//    alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
 }
-
-//kotlin {
-//    androidTarget()
-//    sourceSets {
-//        androidMain.dependencies {
-//            implementation(project(":shared"))
-//        }
-//    }
-//}
 
 android {
     compileSdk = 36
@@ -39,6 +29,8 @@ android {
 
 dependencies {
     implementation(project(":shared"))
+
+    debugImplementation(libs.androidx.compose.ui.tooling)
 }
 
 kotlin {
